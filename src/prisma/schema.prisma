@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Filme {
+    id String @id @default(uuid())
+    //gera um unique universal id
+    title String
+    director String 
+    slug String @unique // representacao do titulo sem espaco, simbolo acento e tudo minusculo
+    year Int
+    maximumAttendees Int?  @map("maximum_attendees")
+    reviews Review[] // relacionamento 1-n
+    @@map("filmes")
+}
+model Review{
+    id Int @id @default(autoincrement()) 
+    rating Int
+    comment String? 
+    user String
+    filmeId String
+    filme Filme @relation(fields: [filmeId], references: [id], onDelete: Cascade)
+ // chave estrangeira,
+// se um filme for deletado, todas as reviews tambem sao automaticamente deletadas
+
+}
+
