@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Filmes</h1>
+    <div id="filmes"></div>
+
+    <h2>Adicionar Filme</h2>
+    <form id="filmeForm">
+        <input type="text" id="filmeTitle" placeholder="Título">
+        <input type="text" id="filmeDirector" placeholder="Diretor">
+        <input type="text" id="filmeSlug" placeholder="Slug">
+        <input type="number" id="filmeYear" placeholder="Ano">
+        <button type="submit">Adicionar Filme</button>
+    </form>
+
+    <h2>Adicionar Review</h2>
+<form id="reviewForm">
+        <select id="filmeSelect"></select>
+        <input type="text" id="reviewUser" placeholder="Usuário">
+        <textarea id="reviewContent" placeholder="Escreva sua review"></textarea>
+        <label for="reviewRating">Nota:</label>
+        <select id="reviewRating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button type="submit">Adicionar Review</button>
+    </form>    <script src="scripts.js"></script>
+</body>
+</html>
