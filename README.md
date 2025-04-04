@@ -33,23 +33,24 @@ Este projeto consiste em uma API para gerenciar filmes e reviews, com um fronten
    ```
 2. Instale as dependências:
   ```bash
-    npm install
-    ```
+   npm install
+   ```
 3. Inicialize o banco de dados:
    ```bash
     npx prisma migrate dev
     ```  
 4. Inicie o servidor:
-    ````bash
+```bash
     node run src/app.js
-    ```
+  ```
 O servidor estará aberto na porta 3000
 
 5. Acesse o frontend
     - Abra a url http://localhost:3000/filme no navegador.
 
 
-## 📫 Rotas da API (Testáveis via Postman)
+
+### 📫 Rotas da API (Testáveis via Postman)
 
 | Método | Rota                   | Descrição                               | Body (JSON) Exemplo                          |
 |--------|------------------------|-----------------------------------------|---------------------------------------------|
