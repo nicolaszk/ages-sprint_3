@@ -27,29 +27,29 @@ Este projeto consiste em uma API para gerenciar filmes e reviews, com um fronten
 ### Instalação
 
 1. Clone o repositório:
-   ```bash
+```bash
    git clone https://github.com/seuusuario/seuprojeto.git
    cd seuprojeto
-   ```
+```
 2. Instale as dependências:
-  ```bash
+```bash
    npm install
-   ```
+```
 3. Inicialize o banco de dados:
-   ```bash
+```bash
     npx prisma migrate dev
-    ```  
+```  
 4. Inicie o servidor:
 ```bash
-    node run src/app.js
-  ```
+    npx run src/app.js
+```
 O servidor estará aberto na porta 3000
 
-5. Acesse o frontend
-    - Abra a url http://localhost:3000/filme no navegador.
+5. Se quiser acessar o frontend:
+    - Abra a url http://localhost:3000/index.html no navegador.
 
-
-
+6. Se quiser testar pelo postman:
+    
 ### 📫 Rotas da API (Testáveis via Postman)
 
 | Método | Rota                   | Descrição                               | Body (JSON) Exemplo                          |
@@ -59,7 +59,11 @@ O servidor estará aberto na porta 3000
 | POST   | `/filme`              | Cria um novo filme                      | `{ "title": "Kill Bill", "director": "Tarantino", "year": 2003, "slug": "kill-bill" }` |
 | PUT    | `/filme/:slug`        | Atualiza os dados de um filme           | `{ "title": "Novo Título", "director": "Novo Diretor", "year": 2024 }` |
 | DELETE | `/filme/:slug`        | Remove um filme                         | —                                           |
-| POST   | `/filme/:slug/review` | Adiciona uma review a um filme          | `{ "rating": 5, "comment": "Excelente filme!" , "user" : Vicente}` |
-| GET    | `/filme/:slug/reviews`| Lista as reviews de um filme específico | —                                           |
- 
+| POST   | `/review/:slug`       | Adiciona uma review a um filme          | `{ "rating": 5, "comment": "Excelente filme!" , "user" : Vicente}` |
+| GET    | `/review/slug`        | Lista as reviews de um filme específico | —                                           |
+| DELETE | `/review/:id`         | Remove um review pelo seu id            | -                                           |
+| PUT    | `/review/id`          | Altera um review pelo seu id            | —                                           |
+| POST   | `/review/:slug`       | Adiciona uma review a um filme          | `{ "rating": 5, "comment": "Excelente filme!" , "user" : Vicente}` |
+| GET    | `/review/slug`        | Lista as reviews de um filme específico | —                                           |
+|--------|------------------------|-----------------------------------------|---------------------------------------------| 
 
