@@ -60,10 +60,10 @@ O servidor estará aberto na porta 3000
 | PUT    | `/filme/:slug`        | Atualiza os dados de um filme           | `{ "title": "Novo Título", "director": "Novo Diretor", "year": 2024 }` |
 | DELETE | `/filme/:slug`        | Remove um filme                         | —                                           |
 | POST   | `/review/:slug`       | Adiciona uma review a um filme          | `{ "rating": 5, "comment": "Excelente filme!" , "user" : Vicente}` |
-| GET    | `/review/slug`        | Lista as reviews de um filme específico | —                                           |
+| GET    | `/review/:slug`        | Lista as reviews de um filme específico | —                                           |
 | DELETE | `/review/:id`         | Remove um review pelo seu id            | -                                           |
 | PUT    | `/review/id`          | Altera um review pelo seu id            | —                                           |
 | POST   | `/review/:slug`       | Adiciona uma review a um filme          | `{ "rating": 5, "comment": "Excelente filme!" , "user" : Vicente}` |
-| GET    | `/review/slug`        | Lista as reviews de um filme específico | —                                           |
+| GET    | `/review/:slug`        | Lista as reviews de um filme específico | —                                           |
 |--------|------------------------|-----------------------------------------|---------------------------------------------| 
 
